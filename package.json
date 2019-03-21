@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "name": "react-native-easy-view-transformer",
+  "description": "An easy and simple to use React Native component to transform and translate a view.",
+  "keywords": [
+    "react-native-easy-view-transformer",
+    "react-native",
+    "config",
+    "zoom in",
+    "zoom out",
+    "double tap",
+    "panning",
+    "over scroll distance",
+    "over scroll resistance",
+    "on pinch",
+    "on single tap",
+    "scaling",
+    "view",
+    "transform",
+    "translate",
+    "images",
+    "ios",
+    "android"
+  ],
+  "homepage": "https://github.com/Luehang/react-native-easy-view-transformer",
+  "author": {
+    "name": "Lue Hang",
+    "email": "lue_hang@hotmail.com",
+    "url": "https://www.luehangs.site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luehang/react-native-easy-view-transformer"
+  },
+  "bugs": {
+    "url": "https://github.com/Luehang/react-native-easy-view-transformer/issues"
+  },
+  "directories": {
+    "src": "./src"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "/src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-native-easy-guesture-responder": "^1.0.0",
+    "react-native-scrolling": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.1",
+    "@babel/core": "^7.4.0",
+    "@babel/runtime": "^7.4.0",
+    "babel-jest": "^24.5.0",
+    "jest": "^24.5.0",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "16.8.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.5.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/",
+    "test": "jest"
+  },
+  "license": "MIT"
+}
