@@ -10,7 +10,7 @@ import {
     fitCenterRect, alignedRect, getTransform
 } from "./TransformUtils";
 
-export default class ViewTransformer extends React.Component {
+export default class ViewTransformer extends React.PureComponent {
     static Rect = Rect;
     static getTransform = getTransform;
 
