@@ -79,6 +79,9 @@ export default class ViewTransformer extends React.Component {
         this.contentRect = this.contentRect.bind(this);
         this.transformedContentRect = this.transformedContentRect.bind(this);
         this.animate = this.animate.bind(this);
+        this.onResponderGrant = this.onResponderGrant.bind(this);
+        this.onResponderRelease = this.onResponderRelease.bind(this);
+        this.onResponderMove = this.onResponderMove.bind(this);
 
         this.scroller = new Scrolling(true, (dx, dy, scroller) => {
             if (dx === 0 && dy === 0 && scroller.isFinished()) {
