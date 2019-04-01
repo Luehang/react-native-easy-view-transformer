@@ -164,6 +164,7 @@ export default class ViewTransformer extends React.Component {
 
         return (
             <View
+                style={{flex: 1}}
                 {...this.props}
                 {...gestureResponder}
                 ref={(component) => (this.innerViewRef = component)}
