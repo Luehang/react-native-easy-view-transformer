@@ -32,6 +32,7 @@ export default class ViewTransformer extends React.Component {
             PropTypes.number,
             PropTypes.string
         ]),
+        onTransformStart: PropTypes.func,
         onViewTransformed: PropTypes.func,
         onPinchTransforming: PropTypes.func,
         onPinchStartReached: PropTypes.func,
@@ -42,7 +43,6 @@ export default class ViewTransformer extends React.Component {
         onDoubleTapConfirmed: PropTypes.func,
         onSingleTapConfirmed: PropTypes.func,
         onLayout: PropTypes.func,
-        onTransformStart: PropTypes.func,
         children: PropTypes.node,
     };
 
