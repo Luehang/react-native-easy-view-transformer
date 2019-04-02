@@ -72,7 +72,13 @@
     "eslint-plugin-react-native": "^3.5.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/example/"
+    ]
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/",
