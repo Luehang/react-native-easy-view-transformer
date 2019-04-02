@@ -36,10 +36,13 @@
     "url": "https://github.com/Luehang/react-native-easy-view-transformer/issues"
   },
   "directories": {
+    "__tests__": "./__tests__",
+    "example": "./example",
     "src": "./src"
   },
   "main": "./src/index.js",
   "files": [
+    "/__tests__",
     "/src",
     "LICENSE",
     "package.json",
