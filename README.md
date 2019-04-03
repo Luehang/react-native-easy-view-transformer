@@ -60,7 +60,7 @@ $ yarn add react-native-easy-view-transformer
 
 # :book: Full Documentation
 
-Learn more about the installation and how to use this package in the updated [documentation](https://www.luehangs.site/lue_hang/projects/react-native-easy-view-transformer) page.
+<p>Learn more about the installation and how to use this package in the updated <a href="https://www.luehangs.site/lue_hang/projects/react-native-easy-view-transformer" target="_blank">documentation</a> page.</p>
 
 <br/>
 <br/>
