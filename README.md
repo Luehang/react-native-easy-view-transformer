@@ -9,6 +9,7 @@
 An easy and simple to use React Native component to transform and translate a view with gestures like pan, pinch and double tap.  Supporting both iOS and Android.  Check out the [docs](https://www.luehangs.site/lue_hang/projects/react-native-easy-view-transformer).
 
 - Supports pinch, double tap or pull.
+- Includes guestures and important event listeners for pan, pinch, single tap and double tap.
 - Easy to use.  Just wrap any view in `<ViewTransformer></ViewTransformer>`.
 - Won't capture children's press.
 - Won't capture children's scroll, if children don't allow.
