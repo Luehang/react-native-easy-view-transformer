@@ -55,6 +55,37 @@ $ yarn add react-native-easy-view-transformer
 ```
 
 <br/>
+<br/>
+<br/>
+
+---
+<br/>
+<br/>
+<br/>
+
+## :tada: Usage Example
+
+Add an ``import`` to the top of the file.  At minimal, wrap any view in the `<ViewTransformer></ViewTransformer>`.
+
+> If you like [`react-native-easy-view-transformer`](https://github.com/Luehang/react-native-easy-view-transformer), please be sure to give it a star at [GitHub](https://github.com/Luehang/react-native-easy-view-transformer). Thanks.
+
+```javascript
+import ViewTransformer from "react-native-easy-view-transformer";
+
+//...
+render() {
+    return (
+        <ViewTransformer
+            maxScale={2} // 2 times zoom
+        >
+            {/* Any kind of view. */}
+        </ViewTransformer>
+    );
+}
+//...
+```
+
+<br/>
 
 ---
 <br/>
