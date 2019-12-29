@@ -12,6 +12,7 @@ import {
     Linking
 } from "react-native";
 import ViewTransformer from "react-native-easy-view-transformer";
+// import ViewTransformer from "./src";
 import MasonryList from "react-native-masonry-list";
 
 const deviceHeight = Dimensions.get("window").height;
