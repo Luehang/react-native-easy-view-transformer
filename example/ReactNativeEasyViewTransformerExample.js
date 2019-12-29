@@ -1,6 +1,6 @@
 "use strict";
 
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
     Dimensions,
     Platform,
@@ -8,7 +8,8 @@ import {
     View,
     Image,
     Text,
-    TouchableWithoutFeedback
+    TouchableWithoutFeedback,
+    Linking
 } from "react-native";
 import ViewTransformer from "react-native-easy-view-transformer";
 import MasonryList from "react-native-masonry-list";
@@ -101,7 +102,8 @@ export default class ReactNativeEasyViewTransformerExample extends Component {
                             </View>
                     </TouchableWithoutFeedback>
                     <TouchableWithoutFeedback
-                        onPress={() => {}}>
+                        style={{borderTopLeftRadius: 7.5,}}
+                        onPress={() => Linking.openURL("https://luehangs.site")}>
                         <View style={styles.tab}>
                             <View style={{paddingBottom: 3}}>
                                 <Text style={styles.tabTextOff}>CAMERA ROLL</Text>
