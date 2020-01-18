@@ -38,6 +38,8 @@ export default class ViewTransformer extends React.Component {
         onPinchStartReached: PropTypes.func,
         onPinchEndReached: PropTypes.func,
         onTransformGestureReleased: PropTypes.func,
+        onSwipeUpReleased: PropTypes.func,
+        onSwipeDownReleased: PropTypes.func,
         onDoubleTapStartReached: PropTypes.func,
         onDoubleTapEndReached: PropTypes.func,
         onDoubleTapConfirmed: PropTypes.func,
@@ -267,15 +269,11 @@ export default class ViewTransformer extends React.Component {
     }
 
     onResponderRelease (evt, gestureState) {
-        let handled = this.props.onTransformGestureReleased &&
-            this.props.onTransformGestureReleased({
-                scale: this.state.scale,
-                translateX: this.state.translateX,
-                translateY: this.state.translateY
-            });
-        if (handled) {
-            return;
-        }
+        const transform = {
+            scale: this.state.scale,
+            translateX: this.state.translateX,
+            translateY: this.state.translateY
+        };
 
         if (gestureState.doubleTapUp) {
             if (!this.props.enableScale) {
@@ -298,6 +296,20 @@ export default class ViewTransformer extends React.Component {
                 this.performFling(gestureState.vx, gestureState.vy);
             } else {
                 this.animateBounce();
+            }
+        }
+
+        this.props.onTransformGestureReleased &&
+            this.props.onTransformGestureReleased(transform);
+
+        if (this.props.onSwipeUpReleased) {
+            if (this.state.scale === 1 && this.state.translateY < -150) {
+                this.props.onSwipeUpReleased(transform);
+            }
+        }
+        if (this.props.onSwipeDownReleased) {
+            if (this.state.scale === 1 && this.state.translateY > 150) {
+                this.props.onSwipeDownReleased(transform);
             }
         }
     }
