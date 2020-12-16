@@ -524,6 +524,7 @@ export default class ViewTransformer extends React.Component {
             {
                 toValue: 1,
                 duration: duration,
+                useNativeDriver: false,
                 easing: Easing.inOut(Easing.ease)
             }
         ).start();
