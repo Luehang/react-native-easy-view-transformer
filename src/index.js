@@ -11,6 +11,7 @@ import {
 } from "./TransformUtils";
 
 export default class ViewTransformer extends React.Component {
+    _isMounted = false;
     static Rect = Rect;
     static getTransform = getTransform;
 
@@ -124,7 +125,8 @@ export default class ViewTransformer extends React.Component {
     }
 
     componentDidMount () {
-        this.gestureResponder = createResponder({
+	this._isMounted = true;
+	this.gestureResponder = createResponder({
             onStartShouldSetResponder: (evt, gestureState) => true,
             onMoveShouldSetResponderCapture: (evt, gestureState) => true,
             // onMoveShouldSetResponder: this.handleMove,
@@ -155,6 +157,7 @@ export default class ViewTransformer extends React.Component {
     }
 
     componentWillUnmount () {
+	this._isMounted = false;
         this.cancelAnimation();
     }
 
@@ -201,7 +204,7 @@ export default class ViewTransformer extends React.Component {
         let handle = findNodeHandle(this.innerViewRef);
         NativeModules.UIManager.measure(handle, (x, y, width, height, pageX, pageY) => {
             if (typeof pageX === "number" && typeof pageY === "number") { // avoid undefined values on Android devices
-                if (this.state.pageX !== pageX || this.state.pageY !== pageY) {
+                if ((this.state.pageX !== pageX || this.state.pageY !== pageY) && this._isMounted) {
                     this.setState({ pageX: pageX, pageY: pageY });
                 }
             }
