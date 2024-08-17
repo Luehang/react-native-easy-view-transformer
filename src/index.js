@@ -451,13 +451,13 @@ export default class ViewTransformer extends React.Component {
             const { resistantStrVertical } = this.props;
             switch (typeof resistantStrVertical) {
                 case "function":
-                    const returnValue = resistantStrVertical(dx);
+                    const returnValue = resistantStrVertical(dy);
                     if (typeof returnValue === "number") {
-                        dx = returnValue;
+                        dy = returnValue;
                         break;
                     }
                     if (typeof returnValue === "string") {
-                        dx = parseFloat(returnValue);
+                        dy = parseFloat(returnValue);
                         break;
                     }
                     // eslint-disable-next-line no-console
@@ -466,7 +466,7 @@ export default class ViewTransformer extends React.Component {
                         "Invalid return value for 'resistantStrVertical' prop. " +
                         "Expecting one of 'number' or 'string'."
                     );
-                    dx = dx /= 3;
+                    dy = dy /= 3;
                     break;
                 case "number":
                     dy = resistantStrVertical;
